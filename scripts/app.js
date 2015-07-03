@@ -43,7 +43,7 @@ app.config([
 app.run(['$rootScope',
     function ($rootScope) {
         'use strict';
-        $rootScope.title = '';
+        $rootScope.title = 'Project Seed Project';
         $rootScope.brand = 'Quicksilver Workshop';
         $rootScope.copyrightYear = new Date().getFullYear();
 
