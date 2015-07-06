@@ -9299,3 +9299,17 @@ md-tooltip.md-show {
     border: 1px solid #fff;
   }
 }
+
+#signIn button.facebook {
+  background-color: #3b5998;
+}
+#signIn button.google {
+  background-color: #d73d32;
+}
+#signIn button.twitter {
+  background-color: #00acee;
+}
+
+#welcome p {
+  color: orange;
+}

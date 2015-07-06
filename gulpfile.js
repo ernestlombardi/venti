@@ -28,7 +28,7 @@ gulp.task("lint", function() {
 });
 
 gulp.task("less", function () {
-    gulp.src(["styles/*.less", "bower_components/angular-material/angular-material.css"])
+    gulp.src(["styles/*.less", "bower_components/angular-material/angular-material.css", "components/**/*.less"])
         .pipe(less())
         .pipe(concat("style.css"))
         .pipe(gulp.dest("styles"))
@@ -108,6 +108,7 @@ gulp.task("browser-sync", function () {
         }
     });
 
+    gulp.watch("components/**/*.less", ["less"]);
     gulp.watch("styles/*.less", ["less"]);
     gulp.watch("scripts/**/*.js", ["scripts", "copy"]);
     gulp.watch("components/**/*.js", ["scripts", "copy"]);
