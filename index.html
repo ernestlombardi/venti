@@ -2,8 +2,8 @@
 <html ng-app="app">
 <head lang="en">
     <meta charset="UTF-8">
-    <meta name="description" content="Project Seed Project: A project seed for new JS application development featuring AngularJS, Angular Material, Angular Route, and Angular Resource">
-    <meta name="keywords" content="MVC, MVVC, MV*, Test Driven Development, Gulp, Karma, Jasmine, AngularJS">
+    <meta name="description" content="venti: Project Seed Project, A project seed for new JS application development featuring AngularJS, Angular Material, Angular Route, and Angular Resource">
+    <meta name="keywords" content="MVC, MVVM, MV*, Test Driven Development, Gulp, Karma, Jasmine, AngularJS">
     <meta name="revisit-after" content="3 days">
     <meta name="robots" content="index, follow">
     <meta name="company" content="Quicksilver Workshop">
@@ -18,7 +18,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-    <title>{{title}}</title>
+    <title>venti</title>
     <link href="images/favicon.ico" rel="Shortcut Icon" type="image/x-icon"/>
 
     <!-- build:css -->
@@ -38,7 +38,6 @@
     <div layout="row" flex>
         <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
             <md-list>
-                <md-subheader>Navigation</md-subheader>
                 <md-list-item>
                     <a href="#/">Sign-in</a>
                 </md-list-item>
@@ -73,6 +72,8 @@
     <script src="scripts/controllers.js"></script>
     <script src="components/welcome/welcome-controller.js"></script>
     <script src="components/sign-in/sign-in-controller.js"></script>
+    <script src="components/sign-in/sign-in-directive.js"></script>
+    <script src="components/dialog/dialog-controller.js"></script>
     <!-- endbuild -->
 </body>
 </html>

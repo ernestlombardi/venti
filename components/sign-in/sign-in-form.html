@@ -1,0 +1,55 @@
+<form name="signInForm" novalidate>
+    <md-subheader>Sign-in with your social media account</md-subheader>
+    <div layout="row" layout-align="space-around center">
+        <flex>
+            <md-button class="md-raised md-primary md-button google"
+                       aria-label="Google Sign-in"
+                       ng-click="providerLogin('google')">
+                <md-icon md-svg-src="images/icons/ic_post_gplus_48px.svg"></md-icon>
+            </md-button>
+        </flex>
+        <flex>
+            <md-button class="md-raised md-primary md-button twitter"
+                       aria-label="Twitter Sign-in"
+                       ng-click="providerLogin('twitter')">
+                <md-icon md-svg-src="images/icons/ic_post_twitter_48px.svg"></md-icon>
+            </md-button>
+        </flex>
+        <flex>
+            <md-button class="md-raised md-primary md-button facebook"
+                       aria-label="Facebook Sign-in"
+                       ng-click="providerLogin('facebook')">
+                <md-icon md-svg-src="images/icons/ic_post_facebook_48px.svg"></md-icon>
+            </md-button>
+        </flex>
+    </div>
+    <br>
+    <md-divider></md-divider>
+    <br>
+    <md-subheader>Sign-in with your email address</md-subheader>
+    <md-input-container>
+        <label>Email:</label>
+        <input ng-model="email"
+               type="email"
+               name="email"
+               ng-required="true">
+    </md-input-container>
+
+    <md-input-container>
+        <label>Password:</label>
+        <input ng-model="password"
+               type="password"
+               name="password"
+               ng-required="true"
+               ng-minlength="8">
+    </md-input-container>
+    <br>
+    <div layout="row" layout-align="space-between center">
+        <md-button class="md-button md-primary"
+                   ng-click="showForgotPassword($event)">Forgot password?</md-button>
+        <md-button class="md-raised md-primary md-hue-2"
+                   ng-click="emailLogin()"
+                   ng-disabled="signInForm.email.$invalid">Submit</md-button>
+    </div>
+    <br>
+</form>
