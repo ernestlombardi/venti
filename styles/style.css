@@ -1,5 +1,10 @@
+@font-face {
+  font-family: 'Droid Serif Regular';
+  src: url('fonts/Droid_Serif/DroidSerif.ttf') format('truetype');
+}
 body {
   color: #333333;
+  font-family: 'Droid Serif Regular', serif;
 }
 footer {
   bottom: 5px;

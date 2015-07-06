@@ -1,6 +1,6 @@
 {
   "name": "venti",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Project Seed Project: AngularJS, Angular Material, Gulp, Karma, Jasmine",
   "main": "gulpfile.js",
   "dependencies": {
@@ -16,8 +16,10 @@
     "gulp-jshint": "^1.11.1",
     "gulp-karma": "0.0.4",
     "gulp-less": "^3.0.3",
+    "gulp-ng-html2js": "^0.2.0",
     "gulp-rename": "^1.2.2",
     "gulp-uglify": "^1.2.0",
+    "gulp-zip": "^3.0.2",
     "jasmine-core": "^2.3.4",
     "karma": "^0.12.37",
     "karma-chrome-launcher": "^0.2.0",

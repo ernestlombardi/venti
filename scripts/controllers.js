@@ -1,10 +1,10 @@
 var Application = Application || {};
 
 Application.Controllers
-    .controller('AppCtrl',
+    .controller("AppCtrl",
     function ($scope, $mdSidenav) {
-        'use strict';
-        $scope.title = 'Hello World';
+        "use strict";
+        $scope.title = "Hello World";
 
         $scope.toggleSidenav = function(menuId) {
             $mdSidenav(menuId).toggle();

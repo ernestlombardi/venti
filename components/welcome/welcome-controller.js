@@ -1,9 +1,8 @@
-'use strict';
-
 var Application = Application || {};
 
 Application.Controllers
-    .controller('WelcomeCtrl',
+    .controller("WelcomeCtrl",
     function ($scope) {
-        $scope.appTitle = 'Welcome to Project Seed Project';
+        "use strict";
+        $scope.pageTitle = "Welcome to Project Seed Project";
     });
