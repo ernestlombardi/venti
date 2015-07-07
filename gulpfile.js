@@ -41,7 +41,7 @@ gulp.task("copy", function () {
         .pipe(gulp.dest(".tmp/components"));
     gulp.src("images/**/*.*")
         .pipe(gulp.dest(".tmp/images"));
-    gulp.src("styles/fonts/**/*.")
+    gulp.src("styles/fonts/**/*.*")
         .pipe(gulp.dest(".tmp/styles/fonts"));
 });
 
