@@ -1,7 +1,9 @@
 # venti
-Project Seed Project
+Angular Material Project Seed
 
 venti is a seed project for new development featuring AngularJS and Angular Material.
+
+See the [venti demo](http://venti.quicksilverworkshop.com).
 
 ## Getting Started
 
