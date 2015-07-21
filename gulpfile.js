@@ -27,6 +27,7 @@ gulp.task("lint", function() {
         .pipe(jshint.reporter("default"));
 });
 
+// Process LESS files
 gulp.task("less", function () {
     gulp.src(["styles/*.less", "bower_components/angular-material/angular-material.css", "components/**/*.less"])
         .pipe(less())
@@ -36,6 +37,7 @@ gulp.task("less", function () {
         .pipe(gulp.dest(".tmp/styles"));
 });
 
+// Copy local source to .tmp directory for pre-processing
 gulp.task("copy", function () {
     gulp.src("components/**/*.html")
         .pipe(gulp.dest(".tmp/components"));
@@ -45,6 +47,7 @@ gulp.task("copy", function () {
         .pipe(gulp.dest(".tmp/styles/fonts"));
 });
 
+// Replace annotations in HTML with paths to processed resources
 gulp.task("htmlreplace", function() {
     gulp.src("index.html")
         .pipe(htmlreplace({
@@ -55,6 +58,7 @@ gulp.task("htmlreplace", function() {
         .pipe(gulp.dest(".tmp"));
 });
 
+// Concatenate, rename, and uglify JS dependencies
 gulp.task("lib", function() {
     return gulp.src(["bower_components/angular/angular.js",
         "bower_components/angular-animate/angular-animate.js",
@@ -69,6 +73,7 @@ gulp.task("lib", function() {
         .pipe(gulp.dest(".tmp/scripts"));
 });
 
+// Concatenate, rename, and uglify application JS
 gulp.task("scripts", function() {
     return gulp.src(["scripts/*.js",
         "!scripts/*-spec.js",
@@ -81,6 +86,7 @@ gulp.task("scripts", function() {
         .pipe(gulp.dest(".tmp/scripts"));
 });
 
+// Process HTML templates/views into JS for testing
 gulp.task("preprocessHTML", function () {
     gulp.src("components/**/*.html")
         .pipe(ngHtml2Js({
@@ -92,6 +98,7 @@ gulp.task("preprocessHTML", function () {
         .pipe(gulp.dest(".tmp/templates"));
 });
 
+// Run local server with watches on specified flies
 gulp.task("browser-sync", function () {
     var files = [
         "**/*.html",
@@ -114,6 +121,7 @@ gulp.task("browser-sync", function () {
     gulp.watch("components/**/*.js", ["scripts", "copy"]);
 });
 
+// Karma test runner
 gulp.task("karma", function () {
     return gulp.src("./test")
         .pipe(karma({
