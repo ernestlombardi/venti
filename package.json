@@ -1,15 +1,21 @@
 {
   "name": "venti",
-  "version": "0.0.2",
-  "description": "Project Seed Project: AngularJS, Angular Material, Gulp, Karma, Jasmine",
+  "version": "0.0.3",
+  "description": "Project Seed Project: AngularJS, Angular Material, Node, Gulp, Karma",
   "main": "gulpfile.js",
   "dependencies": {
-    "bower": "^1.4.1",
-    "gulp": "^3.9.0"
+    "angular": "^1.4.7",
+    "angular-animate": "^1.4.7",
+    "angular-aria": "^1.4.7",
+    "angular-material": "^0.11.4",
+    "angular-resource": "^1.4.7",
+    "angular-route": "^1.4.7"
   },
   "devDependencies": {
-    "browser-sync": "^2.7.13",
+    "angular-mocks": "^1.4.7",
+    "browser-sync": "^2.10.0",
     "del": "^1.2.0",
+    "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
     "gulp-html-replace": "^1.5.1",
     "gulp-jasmine": "^2.0.1",
