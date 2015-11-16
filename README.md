@@ -11,7 +11,6 @@ Run the following in the project directory:
 
 ```js
 npm install
-bower install
 gulp
 ```
 

@@ -29,7 +29,7 @@ gulp.task("lint", function() {
 
 // Process LESS files
 gulp.task("less", function () {
-    gulp.src(["styles/*.less", "bower_components/angular-material/angular-material.css", "components/**/*.less"])
+    gulp.src(["styles/*.less", "node_modules/angular-material/angular-material.css", "components/**/*.less"])
         .pipe(less())
         .pipe(concat("style.css"))
         .pipe(gulp.dest("styles"))
@@ -60,12 +60,12 @@ gulp.task("htmlreplace", function() {
 
 // Concatenate, rename, and uglify JS dependencies
 gulp.task("lib", function() {
-    return gulp.src(["bower_components/angular/angular.js",
-        "bower_components/angular-animate/angular-animate.js",
-        "bower_components/angular-aria/angular-aria.js",
-        "bower_components/angular-material/angular-material.js",
-        "bower_components/angular-resource/angular-resource.js",
-        "bower_components/angular-route/angular-route.js"])
+    return gulp.src(["node_modules/angular/angular.js",
+        "node_modules/angular-animate/angular-animate.js",
+        "node_modules/angular-aria/angular-aria.js",
+        "node_modules/angular-material/angular-material.js",
+        "node_modules/angular-resource/angular-resource.js",
+        "node_modules/angular-route/angular-route.js"])
         .pipe(concat("lib.js"))
         .pipe(gulp.dest(".tmp/scripts"))
         .pipe(rename("lib.min.js"))
@@ -100,6 +100,19 @@ gulp.task("preprocessHTML", function () {
 
 // Run local server with watches on specified flies
 gulp.task("browser-sync", function () {
+/*    (function() {
+        var childProcess = require("child_process");
+        var oldSpawn = childProcess.spawn;
+        function mySpawn() {
+            console.log('spawn called');
+            console.log(arguments);
+            var result = oldSpawn.apply(this, arguments);
+            return result;
+        }
+        childProcess.spawn = mySpawn;
+    })();*/
+
+
     var files = [
         "**/*.html",
         "styles/**/*.*",
